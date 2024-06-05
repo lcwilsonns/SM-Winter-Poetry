@@ -1,9 +1,9 @@
 :root {
   --primary: #ccb5ba;
   --primaryLight: #9cf661;
-  --secondary: #433e3f;
+  --secondary: #302c2d;
   --secondaryLight: #9cf661;
-  --headerColor: #433e3f;
+  --headerColor: #302c2d;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #fafbfc;
   /* 13px - 16px */
@@ -503,19 +503,6 @@ h2 {
   /* text-align: center; */
 }
 
-.hero-title-1 {
-  justify-self: end;
-}
-
-.hero-title-2 {
-  justify-self: start;
-  align-self: start;
-}
-
-.hero-title-3 {
-  justify-self: end;
-}
-
 /*----MOBILE HERO MEDIA QUERIES-----*/
 
 @media only screen and (max-width: 63.9375rem) {
@@ -523,7 +510,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: left;
+    justify-items: center;
+    justify-content: center;
     position: relative;
   }
   /* .hero-title {
@@ -540,28 +528,6 @@ h2 {
   position: relative;
   margin-bottom: -75px;
 }
-
-/* can't use below code due to clip path on div */
-
-/* #bsp-about::before,
-#bsp-about::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  background: red;
-  bottom: -1em;
-  z-index: 100;
-}
-
-#bsp-about::before {
-  right: 50%;
-  transform: skew(0, 20deg);
-}
-#bsp-about::after {
-  left: 50%;
-  transform: skew(0, -20deg);
-} */
 
 h2 {
   text-align: center;
@@ -606,6 +572,10 @@ p {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    margin: 0;
+  }
+  #bsp-about {
+    clip-path: polygon(0 0, 40% 0%, 50% 3%, 60% 0%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
@@ -682,6 +652,35 @@ p {
   right: -15px;
   font-size: 46px;
   width: auto;
+}
+
+/* ---- MOBILE WORKS MEDIA QUERIES ---- */
+
+@media only screen and (max-width: 63.9375rem) {
+  #bsp-works {
+    clip-path: polygon(
+      0 0,
+      40% 0%,
+      50% 3%,
+      60% 0%,
+      100% 0,
+      100% 97%,
+      60% 97%,
+      50% 100%,
+      40% 97%,
+      0 97%
+    );
+  }
+  .works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 /*-- -------------------------- -->
