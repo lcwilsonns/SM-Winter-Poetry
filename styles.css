@@ -691,6 +691,29 @@ p {
 }
 
 /*-- -------------------------- -->
+<---          CONTACT            -->
+<--- -------------------------- -*/
+
+#bsp-contact p {
+  color: var(--bodyTextColorWhite);
+}
+
+#bsp-contact h2 {
+  margin-top: 20px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 20px;
+}
+
+.email-address {
+  font-size: 1.5rem;
+}
+
+/*-- -------------------------- -->
 <---          Footer            -->
 <--- -------------------------- -*/
 
