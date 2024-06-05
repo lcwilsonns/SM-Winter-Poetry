@@ -1,9 +1,9 @@
 :root {
   --primary: #ccb5ba;
   --primaryLight: #9cf661;
-  --secondary: #772d12;
+  --secondary: #433e3f;
   --secondaryLight: #9cf661;
-  --headerColor: #772d12;
+  --headerColor: #433e3f;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #fafbfc;
   /* 13px - 16px */
@@ -24,7 +24,7 @@ body {
   /* height: 100%; */
   min-height: 100%;
   font-family: var(--primaryFont);
-  background-image: url(images/pexels-karolina-grabowska-4041285.jpg);
+  background-image: url(images/pexels-karolina-grabowska-4041285-bw.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -48,6 +48,12 @@ body::after {
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+header,
+section,
+footer {
+  filter: none;
 }
 .cs-topper {
   font-size: var(--topperFontSize);
@@ -518,7 +524,7 @@ h2 {
 
 #bsp-about {
   padding: var(--sectionPadding);
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
 }
 
 h2 {
@@ -551,6 +557,7 @@ h2 {
 p {
   padding: 0 1.2rem;
   margin-top: 2rem;
+  color: var(--bodyTextColorWhite);
 }
 
 /*---- MOBILE ABOUT ME MEDIA QUERIES ----*/
@@ -571,10 +578,14 @@ p {
 }
 
 .works-container {
+  width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  background-color: var(--bodyTextColorWhite);
+  margin: 0 auto;
+  padding: 15px;
 }
 
 .book-cover {
@@ -582,6 +593,7 @@ p {
   width: auto;
   box-shadow: 0 2px 5px;
   margin-bottom: 20px;
+  filter: none;
 }
 .buy-link {
   text-decoration: none;
