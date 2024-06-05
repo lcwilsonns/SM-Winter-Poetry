@@ -14,8 +14,8 @@
   --bodyFontSize: 1rem;
   /* 60px - 100px top and bottom */
   --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-  --headerFont: "Didact Gothic", sans-serif;
-  --primaryFont: "Merriweather Sans", sans-serif;
+  --headerFont: "Brygada 1918", serif;
+  --primaryFont: "Raleway", sans-serif;
 }
 
 body {
@@ -489,10 +489,10 @@ h2 {
   padding: var(--sectionPadding);
 }
 .hero-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr 4fr 1fr;
-  grid-template-rows: 1fr 150px 1fr;
+  display: flex;
   position: relative;
+  gap: 30px;
+  justify-content: space-around;
   margin-top: 75px;
 }
 
@@ -504,21 +504,15 @@ h2 {
 }
 
 .hero-title-1 {
-  grid-row: 1 /2;
-  grid-column: 2 / 3;
   justify-self: end;
 }
 
 .hero-title-2 {
-  grid-row: 2 /3;
-  grid-column: 3 / 4;
   justify-self: start;
   align-self: start;
 }
 
 .hero-title-3 {
-  grid-row: 3 / 4;
-  grid-column: 2 / 3;
   justify-self: end;
 }
 
@@ -700,6 +694,7 @@ p {
 
 #bsp-contact h2 {
   margin-top: 20px;
+  color: var(--bodyTextColorWhite);
 }
 .contact-container {
   display: flex;
