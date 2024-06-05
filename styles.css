@@ -8,8 +8,8 @@
   --bodyTextColorWhite: #fafbfc;
   /* 13px - 16px */
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-  /* 31px - 49px */
-  --headerFontSize: clamp(4.1rem, 6.1vw, 9.5rem);
+  /* --headerFontSize: clamp(4.1rem, 6.1vw, 9.5rem); */
+  --headerFontSize: clamp(2.5rem, 0.5676rem + 7.9279vw, 8rem);
   --subHeaderFontSize: clamp(2.1rem, 6.1vw, 3.4rem);
   --bodyFontSize: 1rem;
   /* 60px - 100px top and bottom */
@@ -50,11 +50,6 @@ body::after {
   box-sizing: border-box;
 }
 
-header,
-section,
-footer {
-  filter: none;
-}
 .cs-topper {
   font-size: var(--topperFontSize);
   line-height: 1.2em;
@@ -494,41 +489,89 @@ h2 {
   padding: var(--sectionPadding);
 }
 .hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-rows: 1fr 150px 1fr;
   position: relative;
+  margin-top: 75px;
 }
 
 .hero-title {
   font-size: var(--headerFontSize);
   letter-spacing: 10px;
-  text-align: center;
+  margin: 0;
+  /* text-align: center; */
+}
+
+.hero-title-1 {
+  grid-row: 1 /2;
+  grid-column: 2 / 3;
+  justify-self: end;
+}
+
+.hero-title-2 {
+  grid-row: 2 /3;
+  grid-column: 3 / 4;
+  justify-self: start;
+  align-self: start;
+}
+
+.hero-title-3 {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  justify-self: end;
 }
 
 /*----MOBILE HERO MEDIA QUERIES-----*/
 
-/* @media only screen and (max-width: 63.9375rem) {
+@media only screen and (max-width: 63.9375rem) {
   .hero-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     position: relative;
   }
-  .hero-title {
+  /* .hero-title {
     letter-spacing: 5px;
-  }
-} */
+  } */
+}
 
 /*---- ABOUT ME ----*/
 
 #bsp-about {
   padding: var(--sectionPadding);
-  /* background-color: var(--primary); */
+  background-color: var(--primary);
+  clip-path: polygon(0 0, 40% 0%, 50% 10%, 60% 0%, 100% 0, 100% 100%, 0 100%);
+  position: relative;
+  margin-bottom: -75px;
 }
+
+/* can't use below code due to clip path on div */
+
+/* #bsp-about::before,
+#bsp-about::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background: red;
+  bottom: -1em;
+  z-index: 100;
+}
+
+#bsp-about::before {
+  right: 50%;
+  transform: skew(0, 20deg);
+}
+#bsp-about::after {
+  left: 50%;
+  transform: skew(0, -20deg);
+} */
 
 h2 {
   text-align: center;
+  margin-top: 0;
 }
 
 .author-about-me {
@@ -543,21 +586,22 @@ h2 {
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;
   justify-self: center;
-  width: 200px;
-  height: 300px;
-  border-radius: 50%;
-  background-image: url(images/becky-about-me.jpg);
-  background-size: cover;
-  position: relative;
+  width: auto;
+  height: 350px;
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
 }
 
 .signature {
   justify-self: center;
+  position: relative;
 }
+
 p {
   padding: 0 1.2rem;
   margin-top: 2rem;
   color: var(--bodyTextColorWhite);
+  line-height: 1.5rem;
+  letter-spacing: 1px;
 }
 
 /*---- MOBILE ABOUT ME MEDIA QUERIES ----*/
@@ -575,34 +619,75 @@ p {
 
 #bsp-works {
   padding: var(--sectionPadding);
+  background: #fbf4f4;
+  clip-path: polygon(
+    0 0,
+    40% 0%,
+    50% 10%,
+    60% 0%,
+    100% 0,
+    100% 90%,
+    60% 90%,
+    50% 100%,
+    40% 90%,
+    0 90%
+  );
 }
 
 .works-container {
-  width: 250px;
+  width: 40%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-items: center;
-  background-color: var(--bodyTextColorWhite);
+  gap: 25px;
   margin: 0 auto;
-  padding: 15px;
 }
 
 .book-cover {
-  height: 175px;
+  height: 300px;
   width: auto;
   box-shadow: 0 2px 5px;
-  margin-bottom: 20px;
-  filter: none;
 }
 .buy-link {
   text-decoration: none;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
   color: var(--bodyTextColor);
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .buy-link:hover {
   text-decoration: underline;
+}
+
+.book-quote {
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  font-style: italic;
+  position: relative;
+}
+
+.book-quote::before {
+  content: '"';
+  position: absolute;
+  display: block;
+  top: -15px;
+  left: -25px;
+  font-size: 46px;
+  width: auto;
+}
+
+.book-quote::after {
+  content: '"';
+  position: absolute;
+  display: block;
+  bottom: -15px;
+  right: -15px;
+  font-size: 46px;
+  width: auto;
 }
 
 /*-- -------------------------- -->
