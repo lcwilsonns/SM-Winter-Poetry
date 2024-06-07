@@ -6,6 +6,7 @@
   --headerColor: #302c2d;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #fafbfc;
+  --headerFooterLight: #fbf4f4
   /* 13px - 16px */
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
   /* --headerFontSize: clamp(4.1rem, 6.1vw, 9.5rem); */
@@ -50,6 +51,7 @@ body::after {
   box-sizing: border-box;
 }
 
+/* Navigation bar */
 .cs-topper {
   font-size: var(--topperFontSize);
   line-height: 1.2em;
@@ -463,7 +465,6 @@ body::after {
     width: 100%;
   }
 }
-
 /* ---HERO---*/
 
 /* #hero {
@@ -707,6 +708,17 @@ p {
   font-size: 1.5rem;
 }
 
+@media only screen and (max-width: 63.9375rem) {
+  .contact-container {
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .email-address {
+    font-size: 1rem;
+  }
+}
 /*-- -------------------------- -->
 <---          Footer            -->
 <--- -------------------------- -*/
