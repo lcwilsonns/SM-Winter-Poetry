@@ -708,6 +708,8 @@ p {
   font-size: 1.5rem;
 }
 
+/* ---- CONTACT MEDIA QUERIES ----*/
+
 @media only screen and (max-width: 63.9375rem) {
   .contact-container {
     margin-right: 20px;
