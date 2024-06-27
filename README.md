@@ -1,3 +1,3 @@
-/*BECKY SIMON POETRY*/
+/*SM Winter POETRY*/
 Personal project for static single page author site.
 First commit = initial pink colour scheme.
