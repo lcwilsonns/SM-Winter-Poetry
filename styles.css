@@ -540,7 +540,7 @@ h2 {
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 2fr 1fr;
   column-gap: 20px;
-  margin: 0 3rem;
+  margin: 0 2rem;
 }
 
 .author-image {
@@ -553,8 +553,9 @@ h2 {
 }
 
 .signature {
-  justify-self: center;
+  justify-self: right;
   position: relative;
+  padding-right: 2rem;
 }
 
 p {
@@ -575,8 +576,13 @@ p {
     justify-items: center;
     margin: 0;
   }
+  .author-image {
+    height: 250px;
+    width: auto;
+  }
   #bsp-about {
     clip-path: polygon(0 0, 40% 0%, 50% 3%, 60% 0%, 100% 0, 100% 100%, 0 100%);
+    margin-bottom: -30px;
   }
 }
 
