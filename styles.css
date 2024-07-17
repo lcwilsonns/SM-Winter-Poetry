@@ -525,7 +525,7 @@ h2 {
 #bsp-about {
   padding: var(--sectionPadding);
   background-color: var(--primary);
-  clip-path: polygon(0 0, 40% 0%, 50% 10%, 60% 0%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 40% 0%, 50% 5%, 60% 0%, 100% 0, 100% 100%, 0 100%);
   position: relative;
   margin-bottom: -75px;
 }
@@ -597,11 +597,11 @@ p {
     50% 10%,
     60% 0%, */
     100% 0,
-    100% 90%,
-    60% 90%,
+    100% 95%,
+    60% 95%,
     50% 100%,
-    40% 90%,
-    0 90%
+    40% 95%,
+    0 95%
   );
 }
 
@@ -635,12 +635,9 @@ p {
 }
 
 .store-logo {
-  border-radius: 50%;
+  border-radius: 5%;
 }
-/*COMMENT OUT BELOW .BUY-LINK:HOVER ON 7/19*/
-.buy-link:hover {
-  text-decoration: underline;
-}
+
 
 .book-quote {
   line-height: 1.5rem;
