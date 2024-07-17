@@ -593,9 +593,9 @@ p {
   background: #fbf4f4;
   clip-path: polygon(
     0 0,
-    40% 0%,
+    /* 40% 0%,
     50% 10%,
-    60% 0%,
+    60% 0%, */
     100% 0,
     100% 90%,
     60% 90%,
@@ -621,18 +621,23 @@ p {
 }
 .buy-link-container {
   display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   justify-content: center;
-  margin-top: 30px;
+  margin: 30px 0 auto;
 }
 .buy-link {
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--bodyTextColor);
 }
 
+.store-logo {
+  border-radius: 50%;
+}
+/*COMMENT OUT BELOW .BUY-LINK:HOVER ON 7/19*/
 .buy-link:hover {
   text-decoration: underline;
 }
@@ -714,7 +719,7 @@ p {
 }
 
 .email-address {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 /* ---- CONTACT MEDIA QUERIES ----*/
