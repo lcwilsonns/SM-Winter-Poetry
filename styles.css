@@ -581,7 +581,7 @@ p {
     width: auto;
   }
   #bsp-about {
-    clip-path: polygon(0 0, 40% 0%, 50% 3%, 60% 0%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 40% 0%, 50% 2%, 60% 0%, 100% 0, 100% 100%, 0 100%);
     margin-bottom: -30px;
   }
 }
@@ -636,6 +636,15 @@ p {
 
 .store-logo {
   border-radius: 5%;
+}
+.store-nolink {
+  color: var(--bodyTextColor);
+  text-align: center;
+  margin: 0;
+}
+
+.store-nolink span {
+  font-weight: bold;
 }
 
 
