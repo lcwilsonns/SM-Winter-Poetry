@@ -624,9 +624,12 @@ p {
   flex-direction: column;
   gap: 1.25rem;
   justify-content: center;
+  align-content: center;
   margin: 30px 0 auto;
 }
 .buy-link {
+  justify-content: center;
+  align-content: center;
   text-decoration: none;
   text-align: center;
   font-weight: bold;
